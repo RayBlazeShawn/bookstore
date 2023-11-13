@@ -28,7 +28,7 @@ A Vue.js and Laravel-based online bookstore application that allows users to bro
 ###  Setup
 
 1. Clone the repository:
-git clone repo-url
+git clone https://github.com/RishabhGuptaRoger/bookstore.git
 
 2. Navigate to the project directory and install PHP dependencies:
 composer install
