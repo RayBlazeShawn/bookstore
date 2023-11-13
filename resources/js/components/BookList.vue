@@ -13,9 +13,29 @@
         </ul>
         <h2> Pagination Links</h2>
         <ul class="pagination">
+            <!-- First Page Link -->
+            <li class="page-item">
+                <button @click="fetchBooks(1)" class="page-link" :disabled="pagination.current_page === 1">First</button>
+            </li>
 
-            <li v-for="page in pagination.last_page" :key="page" class="page-item">
-                <button @click="fetchBooks(page)" class="page-link">{{ page }}</button>
+            <!-- Previous Page Link -->
+            <li class="page-item">
+                <button @click="fetchBooks(pagination.current_page - 1)" class="page-link" :disabled="pagination.current_page === 1">Prev</button>
+            </li>
+
+            <!-- Page Number Links -->
+            <li v-for="page in surroundingPages" :key="page" class="page-item">
+                <button @click="fetchBooks(page)" class="page-link" :class="{ active: page === pagination.current_page }">{{ page }}</button>
+            </li>
+
+            <!-- Next Page Link -->
+            <li class="page-item">
+                <button @click="fetchBooks(pagination.current_page + 1)" class="page-link" :disabled="pagination.current_page === pagination.last_page">Next</button>
+            </li>
+
+            <!-- Last Page Link -->
+            <li class="page-item">
+                <button @click="fetchBooks(pagination.last_page)" class="page-link" :disabled="pagination.current_page === pagination.last_page">Last</button>
             </li>
         </ul>
     </div>
@@ -63,6 +83,16 @@ export default {
         isAdmin() {
             // Temporary hardcoded check for development
             return true; // Or false
+        },
+        surroundingPages() {
+            const startPage = Math.max(this.pagination.current_page - 2, 1);
+            const endPage = Math.min(startPage + 4, this.pagination.last_page);
+
+            let pages = [];
+            for (let i = startPage; i <= endPage; i++) {
+                pages.push(i);
+            }
+            return pages;
         }
     },
 
@@ -191,4 +221,9 @@ button:hover {
 .page-link:hover {
     background-color: #eee;
 }
+.page-link.active {
+    background-color: #007bff;
+    color: white;
+}
+
 </style>
