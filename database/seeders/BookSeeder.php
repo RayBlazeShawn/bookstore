@@ -12,7 +12,7 @@ class BookSeeder extends Seeder
 {
     public function run()
     {
-        $json = file_get_contents('https://fakerapi.it/api/v1/books?_quantity=100 ');
+        $json = file_get_contents('https://fakerapi.it/api/v1/books?_quantity=100000 ');
         $data = json_decode($json, true)['data'];
 
         foreach ($data as $item) {
