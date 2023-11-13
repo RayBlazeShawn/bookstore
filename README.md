@@ -61,7 +61,8 @@ npm run build
 ## Book List Page/Home Page
 
 ![Screenshot from 2023-11-13 13-19-56](https://github.com/RayBlazeShawn/bookstore/assets/87115048/d840d353-fb0c-4a08-a738-52831e879f3f)
-![Screenshot from 2023-11-13 13-20-10](https://github.com/RayBlazeShawn/bookstore/assets/87115048/918a6edb-f0ba-4c85-9ccd-1c716f3dc347)
+![Screenshot from 2023-11-13 17-04-33](https://github.com/RayBlazeShawn/bookstore/assets/87115048/ccaaabb5-4b1c-4e90-9e59-7e285d7d0985)
+
 
 ## Search Page
 ![Screenshot from 2023-11-13 13-21-31](https://github.com/RayBlazeShawn/bookstore/assets/87115048/450d4cdc-816f-4b85-a456-4cf7422ef3d5)

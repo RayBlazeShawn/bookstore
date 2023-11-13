@@ -82,7 +82,7 @@ export default {
     computed: {
         isAdmin() {
             // Temporary hardcoded check for development
-            return true; // Or false
+            return false; // Or false
         },
         surroundingPages() {
             const startPage = Math.max(this.pagination.current_page - 2, 1);
