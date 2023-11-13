@@ -60,22 +60,18 @@ npm run build
 
 ## Book List Page/Home Page
 
-![Book List Page]()
-
+![Screenshot from 2023-11-13 13-19-56](https://github.com/RayBlazeShawn/bookstore/assets/87115048/d840d353-fb0c-4a08-a738-52831e879f3f)
+![Screenshot from 2023-11-13 13-20-10](https://github.com/RayBlazeShawn/bookstore/assets/87115048/918a6edb-f0ba-4c85-9ccd-1c716f3dc347)
 
 ## Search Page
-
-![Search Page]()
-
+![Screenshot from 2023-11-13 13-21-31](https://github.com/RayBlazeShawn/bookstore/assets/87115048/450d4cdc-816f-4b85-a456-4cf7422ef3d5)
 
 ## Book Detail Page/Product Page
 
-![Product Page]()
-
+![Screenshot from 2023-11-13 13-21-51](https://github.com/RayBlazeShawn/bookstore/assets/87115048/ae0ba506-4085-496e-9e38-2a2f0936df11)
 ## Admin Page
 
-![Admin Page]()
-
+![Screenshot from 2023-11-13 13-22-18](https://github.com/RayBlazeShawn/bookstore/assets/87115048/05327526-ed8b-4745-9923-d37ef875f3fc)
 It is the same page as homepage just admin role 
 
 ### Admin Role Simulation

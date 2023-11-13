@@ -19,6 +19,7 @@
             </li>
         </ul>
     </div>
+
     <!-- Book Form Modal -->
     <book-form-modal
         :show="showBookFormModal"
@@ -55,7 +56,6 @@ export default {
             pagination: {
                 current_page: 1,
                 last_page: 1,
-                // Add other necessary pagination properties
             },
         };
     },
@@ -104,14 +104,12 @@ export default {
                 // Edit mode: Update the book
                 axios.put(`/api/books/${this.selectedBook.id}`, bookData)
                     .then(response => {
-                        // Handle the response, e.g., update the book list
-                        this.fetchBooks(); // Assuming you have a method to refresh the book list
+                        this.fetchBooks();
                     })
                     .catch(error => {
-                        // Handle the error, e.g., show a message to the user
                     });
             } else {
-                if (bookData.title && bookData.author) { // Ensure that book data is not empty
+                if (bookData.title && bookData.author) { // book data is not empty
 
                     // Add mode: Create a new book
                     axios.post('/api/books', bookData)
@@ -122,7 +120,6 @@ export default {
 
                         })
                         .catch(error => {
-                            // Handle the error
                         });
 
                 }
@@ -132,11 +129,9 @@ export default {
         confirmBookDeletion(bookId) {
             axios.delete(`/api/books/${bookId}`)
                 .then(response => {
-                    // Handle the successful deletion, e.g., refresh the book list
                     this.fetchBooks();
                 })
                 .catch(error => {
-                    // Handle the error, e.g., show an error message
                 });
             this.closeConfirmDeleteModal();
         },
