@@ -1,16 +1,16 @@
 <template>
     <div>
-        <search-component></search-component>
+        <navbar-component></navbar-component>
         <router-view></router-view>
     </div>
 </template>
 
 <script>
-import SearchComponent from './SearchComponent.vue';
+import NavbarComponent from '../components/NavbarComponent.vue';
 
 export default {
     components: {
-        SearchComponent
+        NavbarComponent
     }
 };
 </script>

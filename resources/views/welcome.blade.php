@@ -6,8 +6,7 @@
 </head>
 <body>
 <div id="app">
-    <search-component></search-component>
-    <book-list></book-list>
+
 </div>
 
 @vite('resources/js/app.js')

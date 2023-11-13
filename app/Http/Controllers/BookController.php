@@ -56,11 +56,10 @@ class BookController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'title' => 'required|max:255',
-            'author' => 'required|max:255',
-            'publication_date' => 'required|date',
-            'isbn' => 'required|unique:books,isbn',
-            'genre' => 'required',
+            'title' => 'max:255',
+            'author' => 'max:255',
+            'publication_date' => 'date',
+            'isbn' => 'unique:books,isbn',
         ]);
 
         $book = Book::create($validatedData);

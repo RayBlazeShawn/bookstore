@@ -1,15 +1,13 @@
 <template>
-    <div v-if="book" class="book-container">
+    <h1 style="text-align: center;margin: 20px"> Product Page</h1>
 
-        <!-- Left Section for Book Image -->
+    <div v-if="book" class="book-container">
         <div class="book-image">
             <img :src="'/storage/defaultImage.jpg'" :alt="book.title" />
         </div>
 
 
-        <!-- Right Section for Book Details -->
         <div class="book-details">
-            <span>        <button @click="goToBookList" class="back-to-list-btn">Back to Book List</button></span>
             <h2>{{ book.title }}</h2>
             <p>Author: {{ book.author }}</p>
             <p>ISBN: {{ book.isbn }}</p>
@@ -29,9 +27,6 @@
                 <h5>{{ similarBook.title }}</h5>
             </div>
         </div>
-    </div>
-    <div v-if="book" >
-
     </div>
 
     <div v-else>
@@ -55,7 +50,7 @@ export default {
         this.fetchBookDetails();
     },
     watch: {
-        // Watch for changes in the id prop
+        // Here Watching for changes in the id prop
         id(newId, oldId) {
             if (newId !== oldId) {
                 this.fetchBookDetails();
@@ -67,7 +62,7 @@ export default {
             axios.get(`/api/books/${this.id}`)
                 .then(response => {
                     this.book = response.data;
-                    this.fetchSimilarBooks(); // Fetch similar books after getting the details
+                    this.fetchSimilarBooks(); // Fetchingg similar books after getting the details
                 })
                 .catch(error => {
                     console.error('Error fetching book details:', error);
@@ -75,7 +70,7 @@ export default {
         },
 
         fetchSimilarBooks() {
-            axios.get('/api/books') // Replace with your API endpoint
+            axios.get('/api/books')
                 .then(response => {
                     if (Array.isArray(response.data.data)) {
                         this.similarBooks = response.data.data.slice(0, 6);
@@ -88,9 +83,6 @@ export default {
         viewBookDetails(bookId) {
             this.$router.push({ name: 'BookDetails', params: { id: bookId } });
         },
-        goToBookList() {
-            this.$router.push('/books');
-        }
     },
 };
 </script>

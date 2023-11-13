@@ -55,7 +55,7 @@ export default {
                 author: '',
                 isbn: '',
                 genre: '',
-                publication_date: '', // added publication_date
+                publication_date: '',
             },
             books: [],
             loading: false,
@@ -66,7 +66,7 @@ export default {
         searchBooks() {
             this.loading = true;
 
-            // Prepare the parameters, including only non-empty fields
+            // Preparing parameters, including only non-empty fields
             const params = Object.keys(this.search).reduce((acc, key) => {
                 if (this.search[key]) {
                     acc[key] = this.search[key];
@@ -91,7 +91,7 @@ export default {
         },
 
         formatDate(dateString) {
-            const options = { year: 'numeric', month: 'long', day: 'numeric' }; // Example format
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
             return new Date(dateString).toLocaleDateString(undefined, options);
         },
 
