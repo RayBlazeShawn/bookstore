@@ -23,6 +23,8 @@
                 <button @click="fetchBooks(pagination.current_page - 1)" class="page-link" :disabled="pagination.current_page === 1">Prev</button>
             </li>
 
+
+
             <!-- Page Number Links -->
             <li v-for="page in surroundingPages" :key="page" class="page-item">
                 <button @click="fetchBooks(page)" class="page-link" :class="{ active: page === pagination.current_page }">{{ page }}</button>
